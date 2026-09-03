@@ -1,9 +1,14 @@
-notas = [7, 8, 6, 10, 5]
+def calcular_media(lista_de_notas):
+    if not lista_de_notas:
+        return 0.0
+    
+    soma_total = sum(lista_de_notas)
+    quantidade_notas = len(lista_de_notas)
+    
+    return soma_total / quantidade_notas
 
-s = 0
-for i in range(0, len(notas)):
-    s = s + notas[i]
+# Dados de teste para simulação
+notas_turma = [7, 8, 6, 10, 5]
+media_final = calcular_media(notas_turma)
 
-media = s / len(notas)
-
-print("Média final:", media)
+print(f"Média final: {media_final:.2f}")
